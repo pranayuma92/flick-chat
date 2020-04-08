@@ -1,0 +1,506 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* CSS talk bubble */
+.talk-bubble {
+	margin: 10px 20px;
+  display: inline-block;
+  position: relative;
+	width: 250px;
+	height: auto;
+	background-color: lightyellow;
+	border-radius: 10px;
+	visibility: visible;
+}
+.border{
+  border: 8px solid #666;
+}
+.round{
+  border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+
+}
+
+/* Right triangle placed top left flush. */
+.tri-right.border.left-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 0px;
+	bottom: auto;
+	border: 22px solid;
+	border-color: lightyellow transparent transparent transparent;
+}
+
+/* Right triangle, left side slightly down */
+.tri-right.border.left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -40px;
+	right: auto;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: -20px;
+	right: auto;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+}
+.tri-right.btm-left:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+}
+
+/*Right triangle, placed bottom left side slightly in*/
+.tri-right.border.btm-left-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.btm-left-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow transparent transparent lightyellow;
+}
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 30px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 38px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+/*
+	left: -8px;
+  right: auto;
+  top: auto;
+	bottom: -40px;
+	border: 32px solid;
+	border-color: transparent transparent transparent #666;
+	left: 0px;
+  right: auto;
+  top: auto;
+	bottom: -20px;
+	border: 22px solid;
+	border-color: transparent transparent transparent lightyellow;
+
+/*Right triangle, placed bottom right side slightly in*/
+.tri-right.border.btm-right:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -8px;
+	bottom: -40px;
+	border: 20px solid;
+	border-color: #666 #666 transparent transparent;
+}
+.tri-right.btm-right:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: 0px;
+	bottom: -20px;
+	border: 12px solid;
+	border-color: lightyellow lightyellow transparent transparent;
+}
+
+/* Right triangle, right side slightly down*/
+.tri-right.border.right-in:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: 30px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: #666 transparent transparent #666;
+}
+.tri-right.right-in:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -20px;
+  top: 38px;
+	bottom: auto;
+	border: 12px solid;
+	border-color: lightyellow transparent transparent lightyellow;
+}
+
+/* Right triangle placed top right flush. */
+.tri-right.border.right-top:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -40px;
+  top: -8px;
+	bottom: auto;
+	border: 32px solid;
+	border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+  left: auto;
+	right: -20px;
+  top: 0px;
+	bottom: auto;
+	border: 20px solid;
+	border-color: lightyellow transparent transparent transparent;
+}
+
+/* talk bubble contents */
+.talktext{
+  padding: 15px 15px 30px 15px;
+	text-align: left;
+  line-height: 1.5em;
+}
+.talktext p{
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+.talk-bubble.left {
+  background-color: #dedede;
+  align-self: flex-start;
+}
+
+.talk-bubble.right {
+  background-color: #4ec706;
+  align-self: flex-end;
+  color: #fff;
+}
+
+.tri-right.left-top.left:after {
+  border-color: #dedede transparent transparent transparent;
+}
+
+.tri-right.right-top.right:after{
+  border-color: #4ec706 transparent transparent transparent;
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background: #f4f4f4;
+  margin: auto;
+  display: flex;
+  flex: 1;
+}
+
+.outer-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  background: #fff;
+  padding: 30px;
+}
+
+.inner-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+input.input-wrpper {
+  margin-bottom: 10px;
+  padding: 10px;
+  max-width: 300px;
+  width: 300px;
+  border-radius: 50px;
+  border: 2px solid #4ec706;
+}
+
+button.button {
+  width: 100%;
+  min-width: 150px;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 1px solid #4ec706;
+  background: #4ec706;
+  color: #fff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.button:hover {
+  background: #3da500;
+  border: 1px solid #3da500;
+}
+
+.input-box-wrapper {
+  margin: auto;
+  width: 500px;
+  display: flex;
+  flex-flow: column;
+  background: #fff;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+.message-box {
+  height: 400px;
+  padding: 15px 20px;
+}
+
+.message-inner {
+  height: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-flow: column;
+  visibility: hidden;
+} 
+
+.message-box:hover .message-inner {
+	visibility: visible;
+}
+
+.message-inner::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.message-inner::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;  
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px;  
+}
+ 
+/* Handle */
+.message-inner::-webkit-scrollbar-thumb {
+  background: #4ec706;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;  
+  border-bottom-left-radius: 5px; 
+  border-bottom-right-radius: 5px;  
+}
+
+/* Handle on hover */
+.message-inner::-webkit-scrollbar-thumb:hover {
+  background: #004fa0; 
+}
+
+form.form-input-chat {
+    display: flex;
+    padding: 20px;
+    position: relative;
+}
+
+.form-input-chat input {
+    width: 75%;
+    padding: 1.5em;
+    border-radius: 30px;
+    border: 2px solid #4ec706;
+}
+
+.form-input-chat button[type=submit] {
+    width: 60px;
+    background: #4ec706;
+    border: 1px solid #4ec706;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 30px;
+    position: absolute;
+    height: 60px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.talk-bubble.left em {
+	color: #868686;
+	position: absolute;
+    bottom: 5px;
+    left: 15px;
+    font-size: 14px;
+}
+
+.talk-bubble.right em {
+    color: #cecece;
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 14px;
+}
+
+p.typing-status {
+    position: absolute;
+    bottom: 70px;
+    left: 20px;
+    font-style: italic;
+    color: #444444;
+}
+
+.status-bar {
+    background: #4ec706;
+    padding: 0 20px;
+    color: #fff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-sytem {
+    visibility: visible;
+    background: #dedede;
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 0 auto 15px;
+}
+
+.admin-sytem em {
+    display: none;
+}
+
+.admin-sytem .talktext {
+    padding: 10px 15px;
+}
+
+.status-bar span {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    color: #4ec706;
+    font-size: 13px;
+    font-weight:bold; 
+    padding: 2px 5px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.status-bar p {
+    position: relative;
+}
+
+.status-bar img {
+	padding-right: 20px;
+}
+
+.inner-wrapper select {
+    margin-bottom: 10px;
+    padding: 10px;
+    max-width: 324px;
+    width: 100%;
+    border-radius: 50px;
+    border: 2px solid #4ec706;
+    background: #fff;
+}
+
+div#root:after {
+    content: 'Created by Pandu Pranayuma © 2020';
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: dimgrey;
+}
